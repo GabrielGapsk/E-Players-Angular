@@ -1,0 +1,122 @@
+
+/*                             css                                 */
+.container {
+    max-width: 1200px;
+}
+
+
+/*                                BANNER                                 */
+
+/*width setou em 100% tamanho horizontal, height em 600px vertical, definiu a imagem de fundo e colocou para nao repetir*/
+.produtos {
+    width: 100%;
+    height: 600px;
+    background-image: url(/assets/imagens/banner_pilotos.png);
+    background-repeat: no-repeat;
+}
+
+/*estabeleceu o container grid, centralizou o conteudo dele no canto superior direito e depois no meio e estabeleceu o limite de 600px vertical*/
+.produtos .banner-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+}
+
+/*criou um quadrado flexivel, colocou o conteudo da caixa no meio e no centro, colocou os itens em coluna, personalizou tamanho horizontal e vertical e setou cor branca*/
+.produtos .banner-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    width: 500px;
+    height: 270px;
+    color: white;
+}
+
+/*personalizou o titulo*/
+.produtos .banner-info h1 {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 60px;
+    text-align: center;
+}
+
+/*personalizou a escrita*/
+.produtos .banner-info p {
+    font-family: "Roboto-Light";
+    text-align: center;
+    font-size: 18px;
+}
+
+/*personalizou o botão de inscreva-se, flexivel, centralizado, font, tamanho, cor de fundo, arredondou a borda*/
+.produtos .banner-info a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Roboto-Light";
+
+    width: 200px;
+    height: 50px;
+
+    background-color: #C31616;
+    border-radius: 10px;
+    border: 1px solid #C31616;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/*============= JOGOS =================*/
+
+.jogos {
+    background-color: #1E1C21;
+}
+
+.jogos .ofertas {
+    color: white;
+    font-family: "Tittiliun-Web";
+    padding: 20px 0;
+}
+
+.jogos .card {
+    background-image: linear-gradient(to bottom, #1E1C21, #1e1c21f1);
+    color: white;
+    font-family: "Roboto-Light";
+    max-width: 250px;
+    margin-bottom: 25px;
+}
+
+.jogos .card .card-title {
+    font-family: "Roboto-Thin";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.jogos .card .btn-buy {
+    background-color: #C31616;
+    font-family: "Roboto-Light";
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+/*======================TABLET=======991px até 768=============*/
+
+@media screen and (max-width: 991px) {
+
+}
+
+
+/*====================smartphones===========menor que 768 px  (0 até 767)*/
+
+@media screen and (max-width: 767px) {
+
+    .produtos .banner-info h1 {
+        font-size: 55px;
+    }
+
+}

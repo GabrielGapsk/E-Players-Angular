@@ -1,0 +1,118 @@
+
+/*coloquei 3px de espaço em cima e ajustei em 80px o tamanho da imagem*/
+.logo {
+    padding-top: 3px;
+    height: 80px;
+}
+
+/*ajustei o tamanho vertical em 90px e cor de fundo preta*/
+header {
+    height: 80px;
+    background-color: black;
+}
+
+/*tamanho de 750px horizontal, espaçamento igual com o justify between*/
+header .menu {
+    width: 750px;
+    justify-content: space-between;
+    display: flex;
+    max-width: 680px;
+}
+
+/*cor de texto branca, sem decoração, transformou em maiuscula, definiu a fonte e o tamanho*/
+header .menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 20px;
+}
+
+header .menu-bar {
+    display: none;
+}
+
+/* Especificidade css para mostrar e esconder o menu hamburguer  */
+
+.mostrarmenu {
+    left: 0 !important;
+    opacity: 0.98 !important;
+}
+
+/*======================TABLET=======991px até 768=============*/
+
+@media screen and (max-width: 991px) {
+
+    header {
+        padding: 0 35px;
+    }
+
+    header .logo {
+        margin-left: 20px;
+    }
+
+    header .menu {
+        position: fixed;
+        top: 0;
+        left: -80%;
+        z-index: 100;
+
+        background-color: rgba(0, 0, 0, 0.945);
+
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        border-radius: 0 0 0 100px;
+
+        opacity: 0;
+        transition: left 0.5s, opacity 0.6s;
+
+    }
+
+    header .menu a {
+        color: white;
+        border-left: 2px dotted white;
+        font-size: 1.5rem;
+        width: 80%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    header .menu-bar {
+        display: block;
+        width: 45px;
+    }
+
+}
+
+/*====================smartphones===========menor que 768 px  (0 até 767)*/
+
+@media screen and (max-width: 767px) {
+
+    header {
+        height: 60px;
+    }
+
+    header .logo {
+        width: 200px;
+        height: 65px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header .menu a {
+        border-left: 2px dotted white;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    header .menu-bar {
+        width: 35px;
+    }
+
+}
